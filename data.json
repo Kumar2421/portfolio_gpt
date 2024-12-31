@@ -1,0 +1,85 @@
+{
+    "personal_info": {
+      "name": "Senthil Kumar .S",
+      "contact": {
+        "phone": "+91 8190099614",
+        "email": "Thesenthil2105@gmail.com",
+        "address": "4/12.2 South Street, Pukkulam, Udumalpet (tk), Tirupur (District), Tamil Nadu, 642154",
+        "nationality": "Indian",
+        "dob": "21th May 2001",
+        "marital_status": "Unmarried"
+      },
+      "links": {
+        "linkedin": "https://www.linkedin.com/in/senthil-kumar-6786b6246/",
+        "codechef": "https://www.codechef.com/users/ravanan_2421",
+        "github": "https://github.com/Kumar2421",
+        "playstore": "https://play.google.com/store/apps/details?id=com.lead_chess&pcampaignid=web_share"
+      },
+      "languages_known": ["English", "Tamil", "Kannada"]
+    },
+    "summary": {
+      "profile": "Focused & Dynamic Technology Enthusiast, keen on Implementing the Right Skills Required to Help Organizations Reach Their Goals & Maintain Quality Work Life"
+    },
+    "education": [
+      {
+        "institution": "Sree Saraswathi Thyagaraja College, Pollachi",
+        "course": "MCA",
+        "year_of_passing": "2021-23",
+        "cgpa": 73,
+        "tech_stack": ["Flutter", "PHP", "SQL"]
+      },
+      {
+        "institution": "Sree Saraswathi Thyagaraja College, Pollachi",
+        "course": "BCOM(CA)",
+        "year_of_passing": "2018-21",
+        "cgpa": 69
+      }
+    ],
+    "internship": {
+      "company": "Radmat 3D Printer Company",
+      "duration": "6 Months",
+      "project": [
+        {
+          "name": "AI-Based Smart Temperature Training For 3D Printer Using Machine Learning with In IOT",
+          "tech_stack": ["C", "Esp32 (Node MCU)", "Python"]
+        },
+        {
+          "name": "3D Printer Slicer Software Development Using Machine Learning",
+          "tech_stack": ["Python", "Electron", "TensorFlow"]
+        }
+      ]
+    },
+    "work_experience": [
+      {
+        "company": "LEAD INTEGRATED BUSINESS SERVICE",
+        "role": "Application Developer",
+        "experience": "1.8 years",
+        "projects": [
+          {
+            "name": "Computer Vision-Based Employee Monitoring and Attendance System",
+            "description": "Implemented a live attendance marking system using IP Cameras to monitor and track employee check-ins and check-outs while walking. Enhanced security and convenience, including shift allocation scheduling for employees and real-time updates.",
+            "tech_stack": ["Python", "PHP", "SQL", "OpenVino", "TensorFlow"]
+          },
+          {
+            "name": "Multiplayer Chess Game",
+            "description": "Developed a feature-rich multiplayer chess game now live on the Play Store. The game supports real-time online play with robust matchmaking and player authentication.",
+            "tech_stack": ["Flutter", "PHP", "SQL"]
+          }
+        ]
+      }
+    ],
+    "personal_details": {
+      "dob": "21th May 2001",
+      "marital_status": "Unmarried",
+      "nationality": "Indian",
+      "languages_known": ["English", "Tamil", "Kannada"],
+      "address": "4/12.2 South Street, Pukkulam, Udumalpet (tk), Tirupur (District), Tamil Nadu, 642154"
+    },
+    "hobbies": [
+      "Coding/Programming",
+      "Game Development",
+      "Building Personal Projects",
+      "Open Source Contribution"
+    ]
+  }
+  

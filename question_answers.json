@@ -1,0 +1,107 @@
+{
+    "personal_info": [
+      {
+        "question": "What is your name?",
+        "answer": "Senthil Kumar .S"
+      },
+      {
+        "question": "What is your contact information?",
+        "answer": "Phone: +91 8190099614, Email: Thesenthil2105@gmail.com, Address: 4/12.2 South Street, Pukkulam, Udumalpet (tk), Tirupur (District), Tamil Nadu, 642154"
+      },
+      {
+        "question": "What are the links to your profiles?",
+        "answer": "LinkedIn: https://www.linkedin.com/in/senthil-kumar-6786b6246/, CodeChef: https://www.codechef.com/users/ravanan_2421, GitHub: https://github.com/Kumar2421"
+      },
+      {
+        "question": "Which languages do you know?",
+        "answer": "English, Tamil, Kannada"
+      }
+    ],
+    "summary": [
+      {
+        "question": "Can you briefly describe your professional profile?",
+        "answer": "I am a focused and dynamic technology enthusiast, keen on implementing the right skills required to help organizations reach their goals and maintain quality work-life balance."
+      }
+    ],
+    "education": [
+      {
+        "question": "Where did you study and what did you major in?",
+        "answer": "I studied at Sree Saraswathi Thyagaraja College, Pollachi. I pursued an MCA (Master of Computer Applications) and graduated in 2023 with a CGPA of 73. My tech stack includes Flutter, PHP, and SQL."
+      },
+      {
+        "question": "What other education did you complete?",
+        "answer": "I also completed my BCOM(CA) at Sree Saraswathi Thyagaraja College, Pollachi, in 2021 with a CGPA of 69."
+      }
+    ],
+    "internship": [
+      {
+        "question": "Can you tell me about your internship experience?",
+        "answer": "I worked as an intern at Radmat 3D Printer Company for 6 months. I was involved in two projects: 'AI-Based Smart Temperature Training for 3D Printer Using Machine Learning with IoT' and '3D Printer Slicer Software Development Using Machine Learning.' My tech stack included C, Esp32 (Node MCU), and Python for the first project and Python, Electron, and TensorFlow for the second."
+      }
+    ],
+    "work_experience": [
+      {
+        "question": "Where have you worked, and what was your role?",
+        "answer": "I worked at LEAD INTEGRATED BUSINESS SERVICE as an Application Developer for 1.8 years. I developed several projects including a Computer Vision-Based Employee Monitoring and Attendance System and a Multiplayer Chess Game."
+      },
+      {
+        "question": "Could you explain your project on Employee Monitoring and Attendance System?",
+        "answer": "The Employee Monitoring and Attendance System used IP Cameras to monitor employee check-ins and check-outs. It implemented live attendance marking, enhanced security, and convenience, and integrated shift allocation scheduling. The backend was built using Python, PHP, SQL, OpenVino, and TensorFlow to manage attendance and real-time updates."
+      },
+      {
+        "question": "Could you explain your Multiplayer Chess Game project?",
+        "answer": "I developed a feature-rich Multiplayer Chess Game that is now live on the Play Store. The game supports real-time online play and has a robust matchmaking system and player authentication. It was built using Flutter, PHP, and SQL."
+      }
+    ],
+    "personal_details": [
+      {
+        "question": "What is your date of birth?",
+        "answer": "21st May 2001"
+      },
+      {
+        "question": "What is your marital status?",
+        "answer": "Unmarried"
+      },
+      {
+        "question": "What is your nationality?",
+        "answer": "Indian"
+      }
+    ],
+    "hobbies": [
+      {
+        "question": "What are your hobbies?",
+        "answer": "My hobbies include Coding/Programming, Game Development, Building Personal Projects, and Open Source Contribution."
+      }
+    ],
+        "project_related_questions": [
+          {
+            "question": "Can you walk me through your Multiplayer Chess Game project?",
+            "answer": "Sure! The Multiplayer Chess Game is designed to allow users to play chess online in real-time. I integrated robust matchmaking and player authentication features, ensuring seamless game sessions. I used Flutter for the front-end, and PHP and SQL for the back-end and database management. The game is live on the Play Store and has a real-time matchmaking system where players are matched automatically. I focused on performance optimization and scalability, which makes the game handle multiple users simultaneously."
+          },
+          {
+            "question": "What were the challenges you faced during the development of the Multiplayer Chess Game?",
+            "answer": "One of the biggest challenges was implementing the matchmaking system that would ensure players are matched fairly and without delays. I had to design the system to account for real-time user availability and ensure players wouldn't be stuck waiting in long queues. Additionally, ensuring a smooth user experience across different devices was crucial, so optimizing the game's performance was also a priority."
+          },
+          {
+            "question": "Can you tell me about your AI-Based Smart Temperature Training for 3D Printers project?",
+            "answer": "Yes, I developed an AI-based system that used machine learning to optimize the temperature control of a 3D printer. The system used sensors and the ESP32 Node MCU to monitor and adjust the temperature in real-time, ensuring the 3D printing process ran smoothly. The goal was to reduce failures during 3D printing by maintaining the ideal temperature using predictive analysis. I used Python for the backend and C for the low-level interaction with hardware."
+          },
+          {
+            "question": "What was the outcome of your 3D Printer Slicer Software project?",
+            "answer": "The 3D Printer Slicer Software project was aimed at creating a more efficient slicing algorithm for 3D printing. Using machine learning, the system analyzed print patterns and optimized the slicing process for speed and precision. I used Python for the primary development and TensorFlow for the machine learning model. The project improved the printing speed by 30% while maintaining quality."
+          },
+          {
+            "question": "What role did you play in the Employee Monitoring and Attendance System project?",
+            "answer": "In the Employee Monitoring and Attendance System, I was responsible for designing and implementing the backend. I used Python, PHP, and SQL to create a robust system that integrated live IP camera feeds to monitor employee check-ins and check-outs. I also developed the real-time updates feature and created detailed reports for attendance tracking. The system included shift management and location-based verification with QR code integration for enhanced security."
+          },
+          {
+            "question": "What technologies did you use to implement the robust backend for the Employee Attendance system?",
+            "answer": "For the backend, I used Python for real-time processing and data management. PHP was used for server-side scripting, and SQL was utilized for database management to store employee data, attendance logs, and reports. I also integrated OpenVino and TensorFlow for image recognition and processing from the IP cameras, which helped enhance the accuracy and security of the attendance marking system."
+          },
+          {
+            "question": "Can you tell me about the website you built?",
+            "answer": "Yes, I developed a website called PixelPlaza, which is a platform that utilizes the Unsplash API to display high-quality images. The website allows users to browse a variety of images and customize the content they see. It was built using PHP for the backend and integrates API calls to Unsplash to fetch images dynamically. You can check it out at [PixelPlaza](http://pixelplaza.free.nf/pixelplaza/home.php?i=1)."
+          }
+        ]
+  }
+  
