@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanta.js Background</title>
+    <!-- Add CDN for Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--=============== Google Icon ===============-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.cells.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+    <style>
+
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        #vanta-bg {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            text-align: start;
+            color: white;
+            padding: 20px;
+        }
+        .main-content {
+            margin-top: 100px; /* Adjust this value to shift content downwards */
+            min-height: calc(100vh - 200px); /* Adjust based on footer height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Aligns vertically to top */
+            align-items: flex-start; 
+            padding-right: 300px;
+        }
+        .animated-span {
+        display: inline-block; /* Allows margin adjustments */
+        margin-left: -10px; /* Move the span a little to the left */
+        opacity: 0; /* Start hidden for animation */
+        animation: fadeIn 1s forwards; /* Animation to fade in */
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px); /* Start slightly above */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* End at original position */
+        }
+    }
+        .footer-bg {
+            background-color: rgb(31, 31, 31);
+            color: rgb(190, 190, 190);
+            padding: 20px;
+            text-align: start;
+            flex-direction: row;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .marquee {
+            white-space: nowrap;
+            display: flex;
+            animation: marquee 13s linear infinite;
+        }
+        .marquee-item {
+            flex: none;
+            margin-right: 2rem;
+        }
+        .marquee img {
+            transition: transform 0.5s ease;
+            width: 5rem;
+            height: 5rem;
+        }
+        .marquee img:hover {
+            transform: scale(1.8);
+        }
+        /* Responsive Breakpoints */
+        @media (min-width: 640px) { /* Tablet */
+            .marquee img {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+        @media (min-width: 768px) { /* Small Desktop */
+            .marquee img {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        @media (min-width: 1024px) { /* Large Desktop */
+            .marquee img {
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+        .img-grid-light-bg .col {
+            padding: 10px;
+        }
+        .img-grid-light-bg img {
+            width: 50%;
+            height: 50%;
+            border-radius: 8px;
+        }
+        .bottom-left-text-in-img {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .parent-for-btm-left-text {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Vanta.js Background Container -->
+    <div id="vanta-bg"></div>
+
+    <!-- Content Overlay -->
+    <header class="header_main">
+        <nav class="navbar_main">
+            <div class="navbar_data">
+                <div id="navbar_toggle">
+                    <span class="material-symbols-rounded navbar_toggle_menu"> menu </span>
+                    <i class="material-symbols-rounded navbar_toggle_close"> close </i>
+                </div>
+                <a href="#" class="navbar_logo">
+                    <span class="material-symbols-rounded"> eco </span> Earz
+                </a>
+            </div>
+
+            <div class="navbar_menu" id="navbar_menu">
+                <ul class="navbar_list">
+                    <li class="dropdown__item">                      
+                        <div class="nav__link dropdown__button">
+                            projects <span class="material-symbols-rounded dropdown__arrow"> expand_more </span>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <span class="dropdown__title">Model Development & Face Recognition</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Resnet 50</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">open vino</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">open cv & Yolo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                        </div>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Gaming <span class="material-symbols-rounded dropdown__arrow"> expand_more </span>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <span class="dropdown__title">Gamings</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">chess Maltiplayer</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">ai flapy bird</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">tic-tac-toe</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">speed-typing-test</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">shotter</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            algorithams <span class="material-symbols-rounded dropdown__arrow"> expand_more </span>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <span class="dropdown__title">algorithams</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">ai flapy bird</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link"> a * algoritham </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">inception v1</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown__item">                        
+                        <div class="nav__link dropdown__button">
+                            website <span class="material-symbols-rounded dropdown__arrow"> expand_more </span>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <span class="dropdown__title">website</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">pixelplaza</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <section id="navbar_profile">
+                <div id="navbar_profile_search" class="navbar_profile_child">
+                    <div id="navbar_search_icon" class="navbar_profile_child_title">
+                        <span class="material-symbols-rounded navbar_profile_icons"> search </span>
+                        <span class="navbar_profile_name">Search</span>
+                    </div>
+                    <div id="navbar_search_dropdown" class="hide_dropdown">
+                        <div id="search_bar_input_container">
+                            <input type="text" id="search_bar_input" placeholder="Search for products, brands and more">
+                            <span id="navbar_search_dropdown_icon" class="material-symbols-rounded "> search </span>
+                        </div>
+                        <div id="search_suggetion">
+                            <span class="nav_search_suggessions">jeans</span>
+                            <span class="nav_search_suggessions">suits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="navbar_profile_account" class="navbar_profile_child">
+                    <div id="navbar_account_icon" class="navbar_profile_child_title">
+                        <span class="material-symbols-rounded navbar_profile_icons"> person </span>
+                        <span class="navbar_profile_name">Profile</span>
+                    </div>
+                    <div id="navbar_account_dropdown" class="hide_dropdown">
+                        <a href="/Profile/profile.html" id="navbar_account_dropdown_login" class="dropList">LOGIN/SIGNUP</a>
+                        <a href="/Profile/signup.html" class="dropList">Gift Cards</a>
+                        <a href="#" class="dropList">Coupons</a>
+                        <a href="#" class="dropList">Saved Address</a>
+                        <a href="#" class="dropList">Saved Cards</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="content">
+            <h2 class="text-4xl font-bold ">Hi, I'm <span class="text-teal-400 animated-span">Senthil</span></h2>
+            <h2 class="text-4xl font-bold ">Computer Vision Engineer || Flutter Developer</h2>
+            <a href="./resume.pdf" class="inline-block mt-6 px-6 py-3 border-2 border-teal-500 text-teal-700 hover:bg-teal-400 hover:text-gray-900 transition duration-300 ease-in-out rounded-lg" download>
+                Download Resume
+            </a>
+        </div>
+        <div class="row">
+            <div class="col">
+        <div class="px-0 pb-5 img-grid-light-bg">
+            <div class="row mx-5">
+                    <div class="row">
+                        <div class="col parent-for-btm-left-text">
+                            <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                            <div class="bottom-left-text-in-img">Selfies</div>
+                        </div>
+                        <div class="col parent-for-btm-left-text">
+                            <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                            <div class="bottom-left-text-in-img">Football</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col parent-for-btm-left-text">
+                            <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                            <div class="bottom-left-text-in-img">Nomad Family</div>
+                        </div>
+                        <div class="col parent-for-btm-left-text">
+                            <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                            <div class="bottom-left-text-in-img">Home Sweet Home</div>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+    </div>
+    
+    <div class="col">
+    <div class="px-0 pb-5 img-grid-light-bg">
+        <div class="row mx-5">
+            <div class="col">
+                <div class="row">
+                    <div class="col parent-for-btm-left-text">
+                        <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                        <div class="bottom-left-text-in-img">Selfies</div>
+                    </div>
+                    <div class="col parent-for-btm-left-text">
+                        <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                        <div class="bottom-left-text-in-img">Football</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col parent-for-btm-left-text">
+                        <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                        <div class="bottom-left-text-in-img">Nomad Family</div>
+                    </div>
+                    <div class="col parent-for-btm-left-text">
+                        <img src="icons/icons8-aws-32.png" alt="Snow" style="width:20%;">
+                        <div class="bottom-left-text-in-img">Home Sweet Home</div>
+                    </div>
+                </div>  
+            </div>   
+            
+            
+        </div>
+    </div>
+    </div>
+    </div>
+
+          
+        <section class="w-full max-w-screen-lg">
+            <div class="text-center mb-8">
+                <!-- <h1 class="text-4xl font-extrabold mb-2">AI/ML Skills</h1>
+                <p class="text-gray-400 text-lg">Key AI, Machine Learning, and Programming Tools</p> -->
+            </div>
+            <div class="relative w-full overflow-hidden">
+                <div class="marquee">
+                    <div class="marquee-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" alt="Pandas">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="icons/icons8-aws-32.png" alt="AWS">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="icons/icons8-yolo-50.png" alt="YOLO">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="icons/icons8-vs-code-48.png" alt="VS Code">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=riEJyZX3xwGg&format=png&color=000000" alt="GitHub">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=zRvbzAjx4VWY&format=png&color=000000" alt="html">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=bpip0gGiBLT1&format=png&color=000000" alt="OpenCV">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000" alt="C++">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=QSjnrUKYMnxO&format=png&color=000000" alt="sql">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=hgveiNjCUQaS&format=png&color=000000" alt="C">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=106036&format=png&color=000000" alt="JavaScript">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000" alt="Flutter">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=7AFcZ2zirX6Y&format=png&color=000000" alt="Dart">
+                    </div>
+                    <div class="marquee-item">
+                        <img src="https://img.icons8.com/?size=100&id=61864&format=png&color=000000" alt="AI">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <!-- Contact section -->
+        <div class="contact-section">
+          <!-- Contact left -->
+          <div class="contact-left">
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4 class="title">Address</h4>
+              <p class="detail">Wireless Road, Moghbazar, Dhaka: 1217</p>
+            </div>
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <h4 class="title">Phone</h4>
+              <p class="detail">+880 123 4567 890</p>
+            </div>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <h4 class="title">Email</h4>
+              <p class="detail">info@domain.com</p>
+            </div>
+          </div>
+          <!-- Contact right -->
+          <div class="contact-right">
+            <h2 class="title">Send A Message</h2>
+            <p class="short-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              nesciunt dicta maiores?
+            </p>
+            <form action="">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>  
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15547.710922668339!2d80.16199156085143!3d13.040272046501462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526130ee5d7a2b%3A0x2e22e53ce9c67720!2sValasaravakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600087!5e0!3m2!1sen!2sin!4v1736312923124!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <footer class="footer-bg" style="border-radius: 10px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <ul class="footer-list">
+                        <h6>LEGAL</h6>
+                        <li>Terms and conditions</li>
+                        <li>License agreement</li>
+                        <li>Privacy policy</li>
+                        <li>Copyright information</li>
+                        <li>Cookies policy</li>
+                        <li>Cookies Settings</li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <ul class="footer-list">
+                        <h6>SOCIAL MEDIA</h6>
+                        <div class="d-flex mb-3">
+                            <div class="me-3 social-media-icon fb">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="me-3 social-media-icon twitter">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                            <div class="me-3 social-media-icon pin">
+                                <i class="fa fa-pinterest"></i>                            
+                            </div>
+                            <div class="me-3 social-media-icon insta">
+                                <i class="fa fa-instagram"></i>                            
+                            </div>
+                            <div class="me-3 social-media-icon ytube">
+                                <i class="fa fa-youtube"></i>                            
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Vanta.js -->
+    <script>
+        VANTA.CELLS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff9900,
+            backgroundColor: 0x000000,
+            size: 1.70,
+            speed: 1.50
+        });
+    </script>
+    <script src="navbar.js"></script>
+</body>
+</html>
